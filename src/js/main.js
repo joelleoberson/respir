@@ -1,12 +1,16 @@
 import gsap from "gsap";
 
-gsap.set(".duration", {
-  opacity: 0.0,
-});
+const btn = document.querySelector("#bouton");
+btn.addEventListener("click", function () {
+  gsap.set(".circle", {
+    scale: 0.75,
+  });
 
-gsap.to(".duration", {
-  scale: 1,
-  opacity: 1,
-  duration: 2,
-  delay: 1,
+  gsap.to(".circle", {
+    scale: 1,
+    duration: 3,
+    repeat: -1,
+    yoyo: -1,
+    delay: 1,
+  });
 });
